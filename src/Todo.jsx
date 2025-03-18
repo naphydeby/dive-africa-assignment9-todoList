@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './todo.css'
 const Todo = () => {
     const [todo, setTodo] = useState('');
     const [todos, setTodos] = useState([]);
@@ -12,7 +13,9 @@ const Todo = () => {
   return (
     
     <>
-      <div>
+    <div className='mytodo-container'>
+      <h1>My Daily Task</h1>
+    <div>
         <input
         type='text'
         value={todo}
@@ -27,6 +30,8 @@ const Todo = () => {
             </li>
         ))}
       </ul>
+    </div>
+     
     </>
   )
 }
