@@ -12,17 +12,19 @@ const Todo = () => {
 
   return (
     
-    <>
+    <div className='overall-container'>
+    
     <div className='mytodo-container'>
-      <h1>My Daily Task</h1>
-    <div>
+      
+    <div className='input-button-container'>
         <input
         type='text'
         value={todo}
         onChange={(e)=>setTodo(e.target.value)}
          />
-        <button onClick={addTodo} >Add Todo</button>
+        <button onClick={addTodo} >Add </button>
       </div>
+      <h1>Today's Task</h1>
       <ul>
         {todos.map((myTodo, index)=>(
             <li key={index}>
@@ -32,8 +34,9 @@ const Todo = () => {
       </ul>
     </div>
      
-    </>
+    </div>
   )
 }
 
 export default Todo
+
